@@ -1,0 +1,17 @@
+
+services:
+  - type: worker
+    name: bur-oak-afk-bot
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MC_HOST
+        value: bur-oak-smp.falixsrv.me
+      - key: MC_PORT
+        value: "25565"
+      - key: MC_USERNAME
+        sync: false
+      - key: MC_AUTH
+        value: offline
